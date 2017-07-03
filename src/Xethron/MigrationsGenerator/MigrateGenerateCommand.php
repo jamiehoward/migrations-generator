@@ -124,6 +124,7 @@ class MigrateGenerateCommand extends GeneratorCommand {
 		$this->compiler = $compiler;
 		$this->repository = $repository;
 		$this->config = $config;
+		$this->log = $this->option('log');
 
 		parent::__construct( $generator );
 	}
