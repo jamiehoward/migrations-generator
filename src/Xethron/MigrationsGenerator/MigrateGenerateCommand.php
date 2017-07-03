@@ -353,6 +353,7 @@ class MigrateGenerateCommand extends GeneratorCommand {
 			['connection', 'c', InputOption::VALUE_OPTIONAL, 'The database connection to use.', $this->config->get( 'database.default' )],
 			['tables', 't', InputOption::VALUE_OPTIONAL, 'A list of Tables you wish to Generate Migrations for separated by a comma: users,posts,comments'],
 			['ignore', 'i', InputOption::VALUE_OPTIONAL, 'A list of Tables you wish to ignore, separated by a comma: users,posts,comments' ],
+			['log', 'l', InputOption::VALUE_OPTIONAL, 'Log the migrations to the database.', false],
 			['path', 'p', InputOption::VALUE_OPTIONAL, 'Where should the file be created?'],
 			['templatePath', 'tp', InputOption::VALUE_OPTIONAL, 'The location of the template for this generator'],
 			['defaultIndexNames', null, InputOption::VALUE_NONE, 'Don\'t use db index names for migrations'],
