@@ -124,7 +124,6 @@ class MigrateGenerateCommand extends GeneratorCommand {
 		$this->compiler = $compiler;
 		$this->repository = $repository;
 		$this->config = $config;
-		$this->log = $this->option('log');
 
 		parent::__construct( $generator );
 	}
@@ -136,6 +135,8 @@ class MigrateGenerateCommand extends GeneratorCommand {
 	 */
 	public function fire()
 	{
+		$this->log = $this->option('log');
+		
 		$this->info( 'Using connection: '. $this->option( 'connection' ) ."\n" );
         if ($this->option('connection') !== $this->config->get('database.default')) {
             $this->connection = $this->option('connection');
